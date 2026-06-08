@@ -117,8 +117,8 @@ function EditUsers() {
     return (
       <Container>
         <h2 className="mt-10 text-2xl font-semibold text-white">Edit user:</h2>
-        <div className="w-full flex justify-center items-center gap-4 mt-10 flex-col">
-          <ClockLoader size={64} color="white" />
+        <div className="w-full flex justify-center items-center gap-4 mt-20 flex-col">
+          <ClockLoader size={50} color="white" />
           <p>loading ...</p>
         </div>
       </Container>
