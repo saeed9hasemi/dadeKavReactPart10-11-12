@@ -40,7 +40,7 @@ function Login() {
               const found = users.find((item: IUser) => {
                 return (
                   item.password == hashedPass &&
-                  item.name.toLowerCase() == name.toLocaleLowerCase()
+                  item.name.toLowerCase() == name.toLowerCase()
                 );
               });
               if (found) {
