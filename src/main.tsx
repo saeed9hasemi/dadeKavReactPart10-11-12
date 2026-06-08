@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/dadeKavReactPart10-11-12">
       <App />
     </BrowserRouter>
   </StrictMode>,
