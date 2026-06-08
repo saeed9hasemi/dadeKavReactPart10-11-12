@@ -38,7 +38,10 @@ function Login() {
             const users = res.data;
             if (users.length > 0) {
               const found = users.find((item: IUser) => {
-                return item.password == hashedPass && item.name == name;
+                return (
+                  item.password == hashedPass &&
+                  item.name.toLowerCase() == name.toLocaleLowerCase()
+                );
               });
               if (found) {
                 if (found.admin) {
