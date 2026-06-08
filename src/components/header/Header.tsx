@@ -9,8 +9,8 @@ function Header() {
   const { isLogin, openModal, logout } = useAuth();
   const [isActive, setIsAvctive] = useState(false);
   return (
-    <>
-      <div className="sticky top-0  w-full bg-slate-900/60">
+    <div className="sticky top-0 w-full z-50">
+      <div className="w-full bg-slate-900/70 backdrop-blur-2xl">
         <Container>
           <div className="relative flex justify-between items-center p-3">
             <Link to={"/"} className="left logo cursor-pointer ">
@@ -70,39 +70,39 @@ function Header() {
             </div>
           </div>
         </Container>
-        {isActive && (
-          <div className="menu sm:hidden absolute top-full  w-full flex flex-col bg-white/10 backdrop-blur-2xl z-50">
-            <Link
-              to={"/"}
-              className="hover:text-white hover:bg-white/5 p-3 w-full text-center"
-              onClick={() => {
-                setIsAvctive(false);
-              }}
-            >
-              Home
-            </Link>
-            <Link
-              to={"/products"}
-              className="hover:text-white hover:bg-white/5 p-3 w-full text-center"
-              onClick={() => {
-                setIsAvctive(false);
-              }}
-            >
-              Products
-            </Link>
-            <Link
-              to={"/users"}
-              className="hover:text-white hover:bg-white/5 p-3 w-full text-center "
-              onClick={() => {
-                setIsAvctive(false);
-              }}
-            >
-              Users
-            </Link>
-          </div>
-        )}
       </div>
-    </>
+      {isActive && (
+        <div className="menu sm:hidden w-full flex flex-col bg-slate-900/50 backdrop-blur-2xl z-50 border-t border-t-slate-700">
+          <Link
+            to={"/"}
+            className="hover:text-white hover:bg-white/5 p-3 w-full text-center"
+            onClick={() => {
+              setIsAvctive(false);
+            }}
+          >
+            Home
+          </Link>
+          <Link
+            to={"/products"}
+            className="hover:text-white hover:bg-white/5 p-3 w-full text-center"
+            onClick={() => {
+              setIsAvctive(false);
+            }}
+          >
+            Products
+          </Link>
+          <Link
+            to={"/users"}
+            className="hover:text-white hover:bg-white/5 p-3 w-full text-center "
+            onClick={() => {
+              setIsAvctive(false);
+            }}
+          >
+            Users
+          </Link>
+        </div>
+      )}
+    </div>
   );
 }
 
