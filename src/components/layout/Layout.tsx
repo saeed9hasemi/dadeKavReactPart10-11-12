@@ -1,7 +1,7 @@
 import { Routes } from "react-router-dom";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import AlertModal from "../alertModal/AlertModal";
 import AuthContext from "../../contexts/AuthContext";
 

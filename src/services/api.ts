@@ -1,6 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-import type { ILoginUser, IUser } from "../types/type";
+import type { IUser } from "../types/type";
 
 export const redNotif = (error: string | null) => {
   toast.error(error, {

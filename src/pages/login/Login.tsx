@@ -9,7 +9,7 @@ import type { IUser } from "../../types/type";
 import { useAuth } from "../../contexts/AuthContext";
 
 function Login() {
-  const { isLogin, login } = useAuth();
+  const { login } = useAuth();
 
   const schema = z.object({
     name: z.string().min(2, "at least 2 characters"),

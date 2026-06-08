@@ -11,7 +11,7 @@ import {
 } from "../../services/api";
 import { ClockLoader } from "react-spinners";
 import Button from "../../components/button/Button";
-import z, { email } from "zod";
+import z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -71,7 +71,7 @@ function EditUsers() {
     }
   };
 
-  const onDelete = (param: string) => {
+  const onDelete = () => {
     try {
       deleteUser(id).then((res) => {
         if (res.status === 200) {

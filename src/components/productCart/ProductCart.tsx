@@ -2,17 +2,10 @@ import type { IProduct } from "../../types/type";
 
 type TProductCart = IProduct;
 
-function ProductCart({
-  id,
-  category,
-  description,
-  image,
-  price,
-  title,
-}: TProductCart) {
+function ProductCart({ description, image, price, title }: TProductCart) {
   return (
     <div className="w-full rounded-lg flex flex-col bg-white/5">
-      <div className="imgWrapper w-full aspect-[4/5] rounded-t-lg bg-white/5 overflow-hidden p-2">
+      <div className="imgWrapper w-full aspect-4/5 rounded-t-lg bg-white/5 overflow-hidden p-2">
         <img
           src={image}
           alt={title}
